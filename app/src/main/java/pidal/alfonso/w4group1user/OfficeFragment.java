@@ -18,7 +18,6 @@ import java.util.List;
 
 import pidal.alfonso.w4group1user.DatabaseHelpers.OfficeHelper;
 import pidal.alfonso.w4group1user.Models.Office;
-import pidal.alfonso.w4group1user.dummy.DummyContent;
 
 /**
  * A fragment representing a list of Items.
