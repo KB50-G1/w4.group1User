@@ -48,6 +48,7 @@ public class OfficeDetailActivity extends Activity {
         officeID.setText(Integer.toString(office.getOfficeID()));
         officeAddress.setText(office.getAddress());
         officePhone.setText(Integer.toString(office.getPhoneNumber()));
+        officeType.setText(office.getOfficeType().toString());
     }
 
     public void phoneNumberClick(View view) {
