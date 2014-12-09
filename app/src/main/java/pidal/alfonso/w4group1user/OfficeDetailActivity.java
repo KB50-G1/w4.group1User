@@ -1,13 +1,10 @@
 package pidal.alfonso.w4group1user;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-import pidal.alfonso.w4group1client.Models.Office;
-
+import pidal.alfonso.w4group1user.Models.Office;
 
 public class OfficeDetailActivity extends Activity {
 

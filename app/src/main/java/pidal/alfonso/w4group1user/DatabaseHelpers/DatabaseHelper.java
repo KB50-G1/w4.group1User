@@ -1,4 +1,4 @@
-package pidal.alfonso.w4group1client.DatabaseHelpers;
+package pidal.alfonso.w4group1user.DatabaseHelpers;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

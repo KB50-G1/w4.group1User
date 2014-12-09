@@ -1,4 +1,4 @@
-package pidal.alfonso.w4group1client.DatabaseHelpers;
+package pidal.alfonso.w4group1user.DatabaseHelpers;
 
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -10,8 +10,8 @@ import android.net.Uri;
 import java.util.ArrayList;
 import java.util.List;
 
-import pidal.alfonso.w4group1client.Models.Office;
-import pidal.alfonso.w4group1client.Models.OfficeType;
+import pidal.alfonso.w4group1user.Models.Office;
+import pidal.alfonso.w4group1user.Models.OfficeType;
 
 /**
  * Created by Sjoerd Thijsse on 12/5/2014.

@@ -11,8 +11,8 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import pidal.alfonso.w4group1client.DatabaseHelpers.OfficeHelper;
-import pidal.alfonso.w4group1client.Models.Office;
+import pidal.alfonso.w4group1user.DatabaseHelpers.OfficeHelper;
+import pidal.alfonso.w4group1user.Models.Office;
 
 
 public class OfficeListActivity extends ListActivity {

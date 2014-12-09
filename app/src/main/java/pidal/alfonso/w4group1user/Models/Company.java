@@ -1,4 +1,4 @@
-package pidal.alfonso.w4group1client.Models;
+package pidal.alfonso.w4group1user.Models;
 
 /**
  * Created by Sjoerd Thijsse on 12/3/2014.
