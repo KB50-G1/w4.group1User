@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                tools:context="pidal.alfonso.w4group1user.MainTabActivity$PlaceholderFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Albert Heijn B.V. is a supermarket chain founded in 1887 in Oostzaan, Netherlands. It is named after Albert Heijn, Sr., the founder of the first store in Oostzaan.
+                        \n\nAlbert Heijn is the oldest organization owned and operated by the Dutch supermarket operator Ahold. The founder of the company (Albert Heijn) was born in 1865. In fact, the name Ahold is short for Albert Heijn Holding."/>
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="http://ah.nl"
+        android:autoLink="web"
+        android:linksClickable="true"/>
+
+</LinearLayout>

@@ -3,5 +3,11 @@
 
     <string name="app_name">w4.group1User</string>
     <string name="title_office_detail">Office Detail</string>
+    <string name="title_activity_main_tab">Albert Heijn App</string>
+    <string name="title_section1">Info</string>
+    <string name="title_section2">Offices</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
