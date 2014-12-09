@@ -1,81 +1,76 @@
 package pidal.alfonso.w4group1user;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.List;
+
+import pidal.alfonso.w4group1client.DatabaseHelpers.OfficeHelper;
+import pidal.alfonso.w4group1client.Models.Office;
 
 
-/**
- * An activity representing a list of Offices. This activity
- * has different presentations for handset and tablet-size devices. On
- * handsets, the activity presents a list of items, which when touched,
- * lead to a {@link OfficeDetailActivity} representing
- * item details. On tablets, the activity presents the list of items and
- * item details side-by-side using two vertical panes.
- * <p/>
- * The activity makes heavy use of fragments. The list of items is a
- * {@link OfficeListFragment} and the item details
- * (if present) is a {@link OfficeDetailFragment}.
- * <p/>
- * This activity also implements the required
- * {@link OfficeListFragment.Callbacks} interface
- * to listen for item selections.
- */
-public class OfficeListActivity extends Activity
-        implements OfficeListFragment.Callbacks {
+public class OfficeListActivity extends ListActivity {
 
-    /**
-     * Whether or not the activity is in two-pane mode, i.e. running on a tablet
-     * device.
-     */
-    private boolean mTwoPane;
+    protected static OfficeHelper officeHelper;
+
+    List<Office> officeList;
+
+    protected final static String IDintent = "office_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_office_list);
+        // setContentView(R.layout.activity_office_list);
 
-        if (findViewById(R.id.office_detail_container) != null) {
-            // The detail container view will be present only in the
-            // large-screen layouts (res/values-large and
-            // res/values-sw600dp). If this view is present, then the
-            // activity should be in two-pane mode.
-            mTwoPane = true;
+        officeHelper = new OfficeHelper(this);
 
-            // In two-pane mode, list items should be given the
-            // 'activated' state when touched.
-            ((OfficeListFragment) getFragmentManager()
-                    .findFragmentById(R.id.office_list))
-                    .setActivateOnItemClick(true);
-        }
+        officeList = officeHelper.getAllOffices();
 
-        // TODO: If exposing deep links into your app, handle intents here.
+        ArrayAdapter adapter = new ArrayAdapter<Office>(
+                this,
+                android.R.layout.simple_list_item_1,
+                officeList
+        );
+
+        adapter.notifyDataSetChanged();
+
+        setListAdapter(adapter);
+
     }
 
-    /**
-     * Callback method from {@link OfficeListFragment.Callbacks}
-     * indicating that the item with the given ID was selected.
-     */
+
     @Override
-    public void onItemSelected(String id) {
-        if (mTwoPane) {
-            // In two-pane mode, show the detail view in this activity by
-            // adding or replacing the detail fragment using a
-            // fragment transaction.
-            Bundle arguments = new Bundle();
-            arguments.putString(OfficeDetailFragment.ARG_ITEM_ID, id);
-            OfficeDetailFragment fragment = new OfficeDetailFragment();
-            fragment.setArguments(arguments);
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.office_detail_container, fragment)
-                    .commit();
+    protected void onResume() {
+        super.onResume();
 
-        } else {
-            // In single-pane mode, simply start the detail activity
-            // for the selected item ID.
-            Intent detailIntent = new Intent(this, OfficeDetailActivity.class);
-            detailIntent.putExtra(OfficeDetailFragment.ARG_ITEM_ID, id);
-            startActivity(detailIntent);
-        }
+        officeList = officeHelper.getAllOffices();
+
+        ArrayAdapter adapter = new ArrayAdapter<Office>(
+                this,
+                android.R.layout.simple_list_item_1,
+                officeList
+        );
+
+        adapter.notifyDataSetChanged();
+
+        setListAdapter(adapter);
+
     }
+
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+
+        Office office = officeList.get(position);
+
+        Intent intent = new Intent(this, OfficeDetailActivity.class);
+        intent.putExtra(IDintent, office.getOfficeID());
+        startActivity(intent);
+    }
+
 }
