@@ -26,7 +26,7 @@ import android.widget.Toast;
  */
 public class InfoFragment extends Fragment {
     //---the images to display---
-    Integer[] imageIDs = {
+    private Integer[] imageIDs = {
             R.drawable.pic1,
             R.drawable.pic2,
             R.drawable.pic3,
@@ -35,31 +35,18 @@ public class InfoFragment extends Fragment {
 
     private Gallery gallery;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     private OnFragmentInteractionListener mListener;
 
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+
      * @return A new instance of fragment InfoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static InfoFragment newInstance(String param1, String param2) {
+    public static InfoFragment newInstance() {
         InfoFragment fragment = new InfoFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -71,13 +58,6 @@ public class InfoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     public class ImageAdapter extends BaseAdapter
@@ -88,12 +68,6 @@ public class InfoFragment extends Fragment {
         public ImageAdapter(Context c)
         {
             context = c;
-            //---setting the style---
-            /*
-            TypedArray a = getActivity().obtainStyledAttributes(R.styleable.Gallery1);
-            itemBackground = a.getResourceId(R.styleable.Gallery1_android_galleryItemBackground,
-                    0);
-            a.recycle();*/
         }
 
         //---returzns the number o images---

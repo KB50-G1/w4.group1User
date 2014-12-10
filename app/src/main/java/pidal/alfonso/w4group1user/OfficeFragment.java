@@ -24,24 +24,13 @@ import pidal.alfonso.w4group1user.Models.Office;
  * Large screen devices (such as tablets) are supported by replacing the ListView
  * with a GridView.
  * <p/>
- * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
- * interface.
- */
-public class OfficeFragment extends Fragment implements AbsListView.OnItemClickListener {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
+    * interface.
+            */
+    public class OfficeFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     protected static OfficeHelper officeHelper;
     List<Office> officeList;
-
-    private OnFragmentInteractionListener mListener;
 
     /**
      * The fragment's ListView/GridView.
@@ -55,11 +44,9 @@ public class OfficeFragment extends Fragment implements AbsListView.OnItemClickL
     private ListAdapter mAdapter;
 
     // TODO: Rename and change types of parameters
-    public static OfficeFragment newInstance(String param1, String param2) {
+    public static OfficeFragment newInstance() {
         OfficeFragment fragment = new OfficeFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -74,11 +61,6 @@ public class OfficeFragment extends Fragment implements AbsListView.OnItemClickL
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
 
         officeHelper = new OfficeHelper(getActivity());
         officeList = officeHelper.getAllOffices();
@@ -106,25 +88,6 @@ public class OfficeFragment extends Fragment implements AbsListView.OnItemClickL
 
         return view;
     }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        /*try {
-            mListener = (OnFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-        */
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
