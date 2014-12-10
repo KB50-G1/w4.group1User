@@ -106,9 +106,9 @@ public class MainTabActivity extends Activity implements ActionBar.TabListener {
 
             switch (position) {
                 case 1:
-                    return OfficeFragment.newInstance("a", "b");
+                    return OfficeFragment.newInstance();
                 default:
-                    return InfoFragment.newInstance("a", "b");
+                    return InfoFragment.newInstance();
             }
 
         }
