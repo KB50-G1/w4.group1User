@@ -142,10 +142,6 @@ public class InfoFragment extends Fragment {
             public void onItemClick(AdapterView parent, View v,
                                     int position, long id)
             {
-                Toast.makeText(getActivity().getBaseContext(),
-                        "pic" + (position + 1) + " selected",
-                        Toast.LENGTH_SHORT).show();
-
                 //---display the images selected---
                 ImageView imageView =
                         (ImageView) getActivity().findViewById(R.id.image1);
