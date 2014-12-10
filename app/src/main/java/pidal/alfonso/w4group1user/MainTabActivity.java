@@ -10,16 +10,13 @@ import android.app.FragmentTransaction;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 public class MainTabActivity extends Activity implements ActionBar.TabListener {
+
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -36,10 +33,14 @@ public class MainTabActivity extends Activity implements ActionBar.TabListener {
      */
     ViewPager mViewPager;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_tab);
+
+
 
         // Set up the action bar.
         final ActionBar actionBar = getActionBar();
@@ -74,7 +75,11 @@ public class MainTabActivity extends Activity implements ActionBar.TabListener {
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
+
     }
+
+
 
 
     @Override
@@ -113,7 +118,7 @@ public class MainTabActivity extends Activity implements ActionBar.TabListener {
                 case 1:
                     return OfficeFragment.newInstance("a", "b");
                 default:
-                    return PlaceholderFragment.newInstance(position+1);
+                    return InfoFragment.newInstance();
             }
 
         }
