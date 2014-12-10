@@ -1,9 +1,9 @@
 package pidal.alfonso.w4group1user;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-
 
 import java.util.List;
 
@@ -83,12 +82,12 @@ public class OfficeFragment extends Fragment implements AbsListView.OnItemClickL
 
         officeHelper = new OfficeHelper(getActivity());
         officeList = officeHelper.getAllOffices();
-        
+
         // TODO: Change Adapter to display your content
         mAdapter = new ArrayAdapter<>(
-                        getActivity(),
-                        android.R.layout.simple_list_item_1,
-                        officeList
+                getActivity(),
+                android.R.layout.simple_list_item_1,
+                officeList
         );
 
     }

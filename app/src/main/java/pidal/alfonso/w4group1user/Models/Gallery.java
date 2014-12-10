@@ -5,8 +5,8 @@ package pidal.alfonso.w4group1user.Models;
  */
 public class Gallery {
 
-    private int galleryID;
-    private String URL;
+    private int     galleryID;
+    private String  URL;
     private Company company;
 
     public Gallery() {

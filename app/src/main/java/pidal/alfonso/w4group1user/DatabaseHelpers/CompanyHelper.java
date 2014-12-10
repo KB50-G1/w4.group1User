@@ -22,8 +22,8 @@ public class CompanyHelper extends DatabaseHelper {
 
     // Column names for company table.
     public static final String KEY_COMPANY_ID = "company_id";
-    public static final String KEY_NAME = "name";
-    public static final String KEY_WEBSITE = "website";
+    public static final String KEY_NAME       = "name";
+    public static final String KEY_WEBSITE    = "website";
 
 
     public CompanyHelper(Context context) {

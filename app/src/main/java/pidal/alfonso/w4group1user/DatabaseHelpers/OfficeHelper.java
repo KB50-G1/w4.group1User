@@ -22,10 +22,10 @@ public class OfficeHelper extends DatabaseHelper {
     public static final String TABLE_OFFICE_NAME = "offices";
 
     // Column names for offices table.
-    public static final String KEY_OFFICE_ID = "office_id";
+    public static final String KEY_OFFICE_ID    = "office_id";
     public static final String KEY_PHONE_NUMBER = "phone_number";
-    public static final String KEY_ADDRESS = "address";
-    public static final String KEY_OFFICE_TYPE = "office_type";
+    public static final String KEY_ADDRESS      = "address";
+    public static final String KEY_OFFICE_TYPE  = "office_type";
 
     private CompanyHelper companyHelper;
 

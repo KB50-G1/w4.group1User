@@ -10,18 +10,18 @@ import android.net.Uri;
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    protected Context context;
+    protected Context        context;
     protected SQLiteDatabase db;
 
     private static final String PROVIDER_NAME = "pidal.alfonso.w4group1provider.GroupOneProvider";
 
-    protected final static Uri CONTENT_URI_COMPANY = Uri.parse("content://" + PROVIDER_NAME + "/companies");
-    protected final static Uri CONTENT_URI_OFFICE = Uri.parse("content://" + PROVIDER_NAME + "/offices");
-    protected final static Uri CONTENT_URI_GALLERY = Uri.parse("content://" + PROVIDER_NAME + "/galleries");
+    protected final static Uri CONTENT_URI_COMPANY  = Uri.parse("content://" + PROVIDER_NAME + "/companies");
+    protected final static Uri CONTENT_URI_OFFICE   = Uri.parse("content://" + PROVIDER_NAME + "/offices");
+    protected final static Uri CONTENT_URI_GALLERY  = Uri.parse("content://" + PROVIDER_NAME + "/galleries");
     protected final static Uri CONTENT_URI_LANGUAGE = Uri.parse("content://" + PROVIDER_NAME + "/languages");
 
-    private static final String DATABASE_NAME = "test.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME    = "test.db";
+    private static final int    DATABASE_VERSION = 1;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

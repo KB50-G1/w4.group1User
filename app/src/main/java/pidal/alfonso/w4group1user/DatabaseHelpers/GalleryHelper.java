@@ -22,7 +22,7 @@ public class GalleryHelper extends DatabaseHelper {
 
     // Column names for galleries table.
     public static final String KEY_GALLERY_ID = "gallery_id";
-    public static final String KEY_URL = "url";
+    public static final String KEY_URL        = "url";
 
     private CompanyHelper companyHelper;
 

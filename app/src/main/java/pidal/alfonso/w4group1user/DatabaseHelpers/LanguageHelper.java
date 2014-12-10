@@ -22,7 +22,7 @@ public class LanguageHelper extends DatabaseHelper {
 
     // Column names for languages table.
     public static final String KEY_LANGUAGE_ID = "language_id";
-    public static final String KEY_LANGUAGE = "language";
+    public static final String KEY_LANGUAGE    = "language";
     public static final String KEY_DESCRIPTION = "description";
 
     private CompanyHelper companyHelper;

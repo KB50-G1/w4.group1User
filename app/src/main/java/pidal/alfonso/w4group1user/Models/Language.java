@@ -5,9 +5,9 @@ package pidal.alfonso.w4group1user.Models;
  */
 public class Language {
 
-    private int languageID;
-    private String language;
-    private String description;
+    private int     languageID;
+    private String  language;
+    private String  description;
     private Company company;
 
     public Language() {

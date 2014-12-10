@@ -6,10 +6,10 @@ package pidal.alfonso.w4group1user.Models;
 public class Office {
 
     private int officeID = 0;
-    private int phoneNumber;
-    private String address;
+    private int        phoneNumber;
+    private String     address;
     private OfficeType officeType;
-    private Company company;
+    private Company    company;
 
     public Office() {
     }
