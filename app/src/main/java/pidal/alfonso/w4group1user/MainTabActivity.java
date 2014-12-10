@@ -113,7 +113,7 @@ public class MainTabActivity extends Activity implements ActionBar.TabListener {
                 case 1:
                     return OfficeFragment.newInstance("a", "b");
                 default:
-                    return PlaceholderFragment.newInstance(position+1);
+                    return InfoFragment.newInstance("a", "b");
             }
 
         }
@@ -136,8 +136,6 @@ public class MainTabActivity extends Activity implements ActionBar.TabListener {
             return null;
         }
     }
-
-
 
     /**
      * A placeholder fragment containing a simple view.

@@ -91,13 +91,6 @@ public class OfficeFragment extends Fragment implements AbsListView.OnItemClickL
                         officeList
         );
 
-
-
-        /*
-        new ArrayAdapter<DummyContent.DummyItem>(
-                getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
-         */
     }
 
     @Override
